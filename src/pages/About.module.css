@@ -1,0 +1,249 @@
+.aboutChild,
+.aboutItem {
+  position: absolute;
+  left: 0;
+  width: 1460px;
+}
+.aboutChild {
+  top: 0;
+  background-color: var(--color-darkslategray);
+  height: 2176px;
+}
+.aboutItem {
+  top: -130px;
+  border-radius: var(--br-85xl);
+  height: 893px;
+  object-fit: cover;
+}
+.frameChild {
+  width: 93px;
+  position: relative;
+  border-radius: var(--br-71xl);
+  height: 93px;
+  object-fit: cover;
+}
+.herosPet {
+  margin: 0;
+}
+.herosPetStoreContainer {
+  width: 175px;
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  flex-shrink: 0;
+}
+.rectangleParent {
+  position: absolute;
+  height: 100%;
+  width: 22.87%;
+  top: 0;
+  right: 77.13%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+}
+.about1,
+.contact,
+.home {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.home {
+  width: 106px;
+}
+.about1,
+.contact {
+  height: 73px;
+}
+.about1 {
+  cursor: pointer;
+  width: 100px;
+}
+.contact {
+  width: 122px;
+}
+.homeParent {
+  position: absolute;
+  height: 78.49%;
+  width: 37.57%;
+  top: 21.51%;
+  right: 23.2%;
+  bottom: 0;
+  left: 39.22%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-46xl);
+  font-size: var(--font-size-13xl);
+}
+.headerChild {
+  position: absolute;
+  height: 69.89%;
+  width: 13.71%;
+  top: 6.45%;
+  right: 0;
+  bottom: 23.66%;
+  left: 86.29%;
+}
+.header {
+  position: absolute;
+  top: 43px;
+  left: 123px;
+  width: 1211px;
+  height: 93px;
+}
+.herosPetStore1,
+.herosPetStoreContainer1 {
+  position: absolute;
+  display: inline-block;
+  color: var(--color-white);
+  width: 645px;
+}
+.herosPetStoreContainer1 {
+  top: 963px;
+  left: 120px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+.herosPetStore1 {
+  top: 841px;
+  left: 123px;
+  font-size: var(--font-size-29xl);
+  height: 106px;
+}
+.aboutInner,
+.rectangleIcon {
+  position: absolute;
+  top: 987px;
+  left: 788px;
+  width: 550px;
+  height: 374px;
+  object-fit: cover;
+}
+.rectangleIcon {
+  top: 1520px;
+}
+.ourGoalIsContainer {
+  position: absolute;
+  top: 194px;
+  left: 123px;
+  font-size: var(--font-size-13xl);
+  letter-spacing: 0.05em;
+  display: inline-block;
+  width: 740px;
+  height: 428px;
+}
+.component1Child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+}
+.aboutUs,
+.contactUs {
+  text-decoration: none;
+  position: absolute;
+  font-size: var(--font-size-17xl);
+  color: inherit;
+  text-align: right;
+}
+.aboutUs {
+  cursor: pointer;
+  top: 20.49%;
+  left: 81.16%;
+}
+.contactUs {
+  top: 57.56%;
+  left: 78.9%;
+}
+.contactUs1,
+.image1Icon {
+  position: absolute;
+  left: 8.42%;
+}
+.contactUs1 {
+  top: 10.73%;
+  font-size: var(--font-size-13xl);
+}
+.image1Icon {
+  height: 12.2%;
+  width: 1.71%;
+  top: 38.54%;
+  right: 89.86%;
+  bottom: 49.27%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.arjayJoveroGuillermo,
+.image2Icon {
+  position: absolute;
+  top: 37.56%;
+  left: 11.44%;
+}
+.image2Icon {
+  height: 12.2%;
+  width: 1.71%;
+  top: 58.54%;
+  right: 89.86%;
+  bottom: 29.27%;
+  left: 8.42%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.div,
+.image3Icon {
+  position: absolute;
+  top: 57.56%;
+  left: 11.44%;
+}
+.image3Icon {
+  height: 12.2%;
+  width: 1.71%;
+  top: 77.07%;
+  right: 89.86%;
+  bottom: 10.73%;
+  left: 8.42%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component1,
+.herosPetStore2 {
+  position: absolute;
+  top: 76.1%;
+  left: 11.44%;
+}
+.component1 {
+  top: 1972px;
+  left: 0;
+  width: 1460px;
+  height: 205px;
+}
+.about {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 2176px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

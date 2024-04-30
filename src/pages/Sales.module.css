@@ -1,0 +1,144 @@
+.salesChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  width: 1460px;
+  height: 1024px;
+}
+.sales1,
+.salesItem {
+  position: absolute;
+  top: 62px;
+  left: 503px;
+}
+.salesItem {
+  top: 164px;
+  left: 483px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-darkslategray);
+  width: 950px;
+  height: 860px;
+}
+.rectangleDiv,
+.salesInner,
+.transactiontableChild {
+  position: absolute;
+  top: 221px;
+  left: 546px;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-gainsboro);
+  width: 388px;
+  height: 226px;
+}
+.rectangleDiv,
+.transactiontableChild {
+  left: 982px;
+}
+.transactiontableChild {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.transactiontable {
+  position: absolute;
+  top: 497px;
+  left: 546px;
+  width: 824px;
+  height: 495px;
+}
+.sidenavigationChild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-darkslategray);
+}
+.admin,
+.dashboard {
+  text-decoration: none;
+  width: 287px;
+  position: relative;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  height: 48px;
+  flex-shrink: 0;
+}
+.admin {
+  cursor: pointer;
+}
+.dashboardParent {
+  position: absolute;
+  height: 57.33%;
+  width: 73.97%;
+  top: 6.63%;
+  right: 18.81%;
+  bottom: 36.05%;
+  left: 7.22%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-22xl);
+}
+.sidenavigation {
+  position: absolute;
+  top: 164px;
+  left: 28px;
+  border-radius: var(--br-11xs);
+  width: 388px;
+  height: 860px;
+  color: var(--color-white);
+}
+.frameChild {
+  width: 93px;
+  position: relative;
+  border-radius: var(--br-71xl);
+  height: 93px;
+  object-fit: cover;
+}
+.herosPet {
+  margin: 0;
+}
+.herosPetStoreContainer {
+  width: 175px;
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  flex-shrink: 0;
+}
+.rectangleParent {
+  position: absolute;
+  top: 43px;
+  left: 123px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+  font-size: var(--font-size-5xl);
+}
+.frameButton {
+  position: absolute;
+  top: 49px;
+  left: 1168px;
+}
+.sales {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
