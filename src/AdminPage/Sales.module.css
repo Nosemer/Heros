@@ -1,0 +1,109 @@
+
+.sales {
+  position: relative;
+  background-color: var(--color-white);
+  height: 1320px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.salesItem {
+  position: absolute;
+  top: 190px;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: 35px;
+  background-color: var(--color-darkslategray);
+  width: 67%;
+  height: 80%;
+}
+.rectangleDiv,
+.salesInner{
+  position: absolute;
+  top: 221px;
+  width: 30%;
+  height: 226px;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  font-weight: bold;
+}
+.salesInner{
+  left: 40%;
+  transform: translate(-50%);
+}
+.rectangleDiv{
+  left: 72%;
+  transform: translate(-50%);
+}
+.transaction {
+  position: absolute;
+  top: calc(1186px - 710px);
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  width: 62%;
+  height: 56%;
+}
+.loading
+{
+left: 50%;
+transform: translateX(-50%);  
+z-index: 1;
+text-align: center;
+position: absolute; 
+font-size: 24px;
+}
+.totalPrice,
+.totalQuantity {
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+.total{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center; 
+}
+.salesInner,
+.rectangleDiv,
+.total{
+  justify-content: center; 
+  align-items: center; 
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 15;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+.paginationControls span {
+  font-size: 13px; /* Adjust the font size of the page number */
+}
+.generatePdf{
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.generatePdf:hover{
+  color: black;
+}
+@media (max-width: 800px){
+  .totalPrice,
+  .totalQuantity {
+    font-size: 16px;
+    display: inline-block;
+    justify-content: center; 
+    text-align: center;
+    display: flex;
+  }
+  .total{
+    top: 200px;
+    display: flex;
+    justify-content: center; 
+  }
+  }

@@ -5,29 +5,108 @@ import {
   Icon,
   IconButton,
   Button,
+  Switch,
+  FormControlLabel,
+  Alert
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 import styles from "./Login.module.css";
+import HomeHeader from "../Admincomponents/HomeHeader";
+import { useAuth } from "../components/AuthContext";
+import CircularProgress from '@mui/material/CircularProgress';
+import Backdrop from '@mui/material/Backdrop';
 
 const Login: FunctionComponent = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const navigate = useNavigate();
+  const [isUser, setisUser] = useState(true); // Initially set to admin
+  const [showAlert, setShowAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [alertSeverity, setAlertSeverity] = useState('');
+  const [alertMessage, setAlertMessage] = useState('');
+  const [usernameError, setUsernameError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const { login } = useAuth();
+
   const handleShowPasswordClick = () => {
     setShowPassword(!showPassword);
   };
+
+  
+  const handleLogin = async () => {
+    setLoading(true); // Set loading to true
+
+    try {
+      let apiUrl;
+      if (isUser) {
+        apiUrl = 'http://localhost:3001/api/login';
+      } else {
+        apiUrl = 'http://localhost:3001/api/login/admin';
+      }
+
+      const response = await axios.post(apiUrl, { username, password });
+
+      if (response.data.success) {
+        setShowAlert(true);
+        setAlertSeverity('success');
+        setAlertMessage('Login successful');
+        login(response.data.user);
+
+        setTimeout(() => {
+          if (isUser) {
+            navigate('/UserCategory');
+          } else {
+            navigate('/Admin');
+          }
+        }, 2000);
+      } else {
+        if (response.data.error === 'Invalid username') {
+          setUsernameError('Incorrect username');
+          setPasswordError('');
+        } else if (response.data.error === 'Invalid password') {
+          setPasswordError('Incorrect password');
+          setUsernameError('');
+        } else {
+          setUsernameError('Incorrect username');
+          setPasswordError('Incorrect password');
+        }
+      }
+    } catch (error) {
+      console.error('Error logging in:', (error as Error).message);
+    } finally {
+      setLoading(false); // Set loading to false after login process is complete
+    }
+  };
+  
   return (
     <div className={styles.login}>
+      <HomeHeader />
+      <Backdrop style={{ zIndex: 10000 }} open={loading}>
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <div className={styles.loginChild} />
+      <FormControlLabel
+          className={styles.switchControl}
+          control={<Switch onChange={() => setisUser((prev) => !prev)} color="default"/>}
+          label={<span className={styles.switchLabel}>Admin</span>}
+      />
       <div className={styles.loginItem} />
       <div className={styles.loginInner} />
       <TextField
         className={styles.rectangleTextfield}
         color="primary"
-        name="Email"
-        label="Email Address"
+        name="Username"
+        label="Username"
         required={true}
         variant="outlined"
-        type="email"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         sx={{ "& .MuiInputBase-root": { height: "41px" }, width: "305px" }}
+        error={!!usernameError} // Highlight the field if there's an error
+        helperText={usernameError} // Display the error message
       />
       <TextField
         className={styles.loginChild1}
@@ -36,7 +115,9 @@ const Login: FunctionComponent = () => {
         label="Password"
         required={true}
         variant="outlined"
-        type={showPassword ? "text" : "password"}
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        type={showPassword ?  "password": "text"}
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
@@ -50,6 +131,8 @@ const Login: FunctionComponent = () => {
           ),
         }}
         sx={{ "& .MuiInputBase-root": { height: "41px" }, width: "305px" }}
+        error={!!passwordError} // Highlight the field if there's an error
+        helperText={passwordError} // Display the error message
       />
       <Button
         className={styles.frameButton}
@@ -58,47 +141,17 @@ const Login: FunctionComponent = () => {
         name="Dashboard"
         size="small"
         variant="contained"
-        href="/dashboard"
+        onClick={handleLogin}
         sx={{ borderRadius: "0px 0px 0px 0px", width: 194, height: 52 }}
       >
         Login now
       </Button>
       <b className={styles.login1}>Login</b>
-      <div className={styles.header}>
-        <div className={styles.rectangleParent}>
-          <img className={styles.frameChild} alt="" src="/rectangle-8@2x.png" />
-          <b className={styles.herosPetStoreContainer}>
-            <p className={styles.herosPet}>Hero’s Pet</p>
-            <p className={styles.herosPet}>Store</p>
-          </b>
-        </div>
-        <div className={styles.homeParent}>
-          <a className={styles.home}>Home</a>
-          <Link className={styles.about} to="/about">
-            About
-          </Link>
-          <a
-            className={styles.contact}
-            href="https://www.facebook.com/messages/t/109817815396558"
-            target="_blank"
-          >
-            Contact
-          </a>
-        </div>
-        <Button
-          className={styles.headerChild}
-          disableElevation={true}
-          color="primary"
-          name="Login"
-          size="medium"
-          variant="outlined"
-          href="/login"
-          sx={{ borderRadius: "0px 0px 0px 0px", width: 166, height: 65 }}
-        >
-          Login
-        </Button>
-      </div>
-      <img className={styles.rectangleIcon} alt="" src="/rectangle-19@2x.png" />
+      <video className={styles.rectangleIcon} autoPlay loop>
+      <source src="vid1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
     </div>
   );
 };

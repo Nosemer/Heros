@@ -1,0 +1,160 @@
+/* Admin.module.css */
+
+.admin {
+  position: relative;
+  background-color: var(--color-white);
+  height: 1730px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+  transition: width 0.3s ease, margin-left 0.3s ease; 
+}
+
+.adminItem {
+  position: absolute;
+  top: 190px;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  background-color: var(--color-darkslategray);
+  width: 67%;
+  height: 85%;
+}
+.adminInnerRec,
+.adminInner,
+.rectangleDiv {
+  position: absolute;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  width: 62%;
+  height: 450px;
+  transition: left 0.3s, right 0.3s;
+}
+.rectangleDiv {
+  top: calc(930px - 710px);
+}
+.adminInnerRec {
+  top: calc(1410px - 710px);
+}
+.adminInner {
+  top: calc(1890px - 710px);
+}
+.textFieldsContainer {
+  position: absolute;
+  top: 330px;
+  left: 27%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s, right 0.3s;
+}
+
+.rectangleTextfield,
+.adminChild2,
+.adminChild3,
+.adminChild5 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  width: 50%;
+  transition: left 0.3s, right 0.3s;
+}
+
+.rectangleTextfield {
+  top: 950px;
+}
+
+.adminChild2 {
+  top: 1020px;
+}
+
+.adminChild3 {
+  top: 1090px;
+}
+
+.adminChild5 {
+  top: 1160px;
+}
+
+.adminChild1,
+.positionParent,
+.sexParent,
+.adminChild4 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 950px;
+  left: 60%;
+  width: 50%;
+  transition: left 0.3s, right 0.3s;
+}
+
+.adminChild1 {
+  top: 950px;
+}
+
+.positionParent {
+  top: 1020px;
+}
+
+.adminChild4 {
+  top: 1090px; 
+}
+
+.sexParent {
+  top: 1160px;
+}
+
+.tableTitle {
+  left: 50%;
+  transform: translateX(-50%);  
+  z-index: 1;
+  text-align: center;
+  position: relative; 
+  font-size: 24px;
+  font-weight:bold;
+  border-bottom: 2px solid #000;
+  transition: left 0.3s, right 0.3s;
+}
+.registerTitle{
+  left: 56%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1;
+  top: 880px;
+  position: relative; 
+  font-size: 24px;
+  font-weight:bold;
+  border-bottom: 2px solid #000;
+  transition: left 0.3s, right 0.3s;
+}
+.adminChild6 {
+  position: absolute;
+  top: 1570px;
+  left: 56%;
+  transform: translateX(-50%);
+  width: 20%;
+  font-size: 12px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.adminChild6:hover{
+color: black;
+}
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.paginationControls span {
+  font-size: 13px;
+  color: #000;
+}
+
+

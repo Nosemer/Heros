@@ -1,18 +1,20 @@
 import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
-import Order from "./pages/Order";
-import Sales from "./pages/Sales";
-import Product from "./pages/Product";
-import Category from "./pages/Category";
-import Admin from "./pages/Admin";
-import Dashboard from "./pages/Dashboard";
+import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
+import Home from "./pages/Home";
+import Order from "./AdminPage/Order";
+import Sales from "./AdminPage/Sales";
+import Product from "./AdminPage/Product";
+import Category from "./AdminPage/Category";
+import Admin from "./AdminPage/Admin";
+import Dashboard from "./AdminPage/Dashboard";
 import Login from "./pages/Login";
 import About from "./pages/About";
+
+import UserOrder from "./UserPage/Order";
+import UserSales from "./UserPage/Sales";
+import UserProduct from "./UserPage/Product";
+import UserCategory from "./UserPage/Category";
+import UserDashboard from "./UserPage/Dashboard";
 
 function App() {
   const action = useNavigationType();
@@ -31,6 +33,10 @@ function App() {
 
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/Order":
         title = "";
         metaDescription = "";
         break;
@@ -62,6 +68,29 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      // user page urls
+      case "/UserOrder":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/UserSales":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/UserProduct":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/UserCategory":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/UserDashboard":
+        title = "";
+        metaDescription = "";
+        break;
+      default:
+        break;
     }
 
     if (title) {
@@ -80,7 +109,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Order />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/Order" element={<Order />} />
       <Route path="/sales" element={<Sales />} />
       <Route path="/product" element={<Product />} />
       <Route path="/category" element={<Category />} />
@@ -88,7 +118,14 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/about" element={<About />} />
+      {/* User Page Routes */}
+      <Route path="/UserOrder" element={<UserOrder />} />
+      <Route path="/UserSales" element={<UserSales />} />
+      <Route path="/UserProduct" element={<UserProduct />} />
+      <Route path="/UserCategory" element={<UserCategory />} />
+      <Route path="/UserDashboard" element={<UserDashboard />} />
     </Routes>
   );
 }
+
 export default App;

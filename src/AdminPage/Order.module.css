@@ -1,0 +1,235 @@
+.order {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 700px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.orderItem {
+  position: absolute;
+  top: 190px;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: 35px;
+  background-color: var(--color-darkslategray);
+  width: 67%;
+  height: 70%;
+}
+.rectangleDiv2,
+.orderInner{
+  top: calc(940px - 710px);
+  position: absolute;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  height: 60%;
+}
+.rectangleDiv2{
+  left: 37.5%;
+  transform: translate(-50%);
+  width: 25%;
+}
+.orderInner{
+  top: 30.4%;
+  left: 70%;
+  transform: translate(-50%);
+  width: 34%;
+  margin-top: 20px;
+}
+.orderInner h3{
+  font-size: 20px;
+  left: 57%;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  margin-bottom: 0px;
+ }
+ .transactionTable {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.TransactionTitle {
+  flex: 1; /* Occupy remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+.TransactionTitle h5,
+.TransactionPrice h5 {
+  margin: 0;
+}
+
+.TransactionPrice {
+  flex: 1; /* Occupy remaining space */
+  text-align: right; /* Align text to the right */
+}
+
+/* Adjust left position */
+.TransactionTitle {
+  left: 50px; /* Adjust as needed */
+}
+
+.TransactionPrice {
+  left: 100px; /* Adjust as needed */
+}
+.cartItems {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  height: 200px; /* Set the desired height */
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+.cartItem {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.cartItem h4 {
+  margin: 0;
+  font-size: 12px;
+}
+.cartItem p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+.paymentSection {
+  left: 8%;
+  right: 0%;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  margin-top: 20px;
+}
+.cancelBuy{
+  left: 20%;
+  transform: translate(-50%);
+  width: 60%;
+  margin-bottom: 10px;
+}
+.paymentField {
+  margin-right: 5px;
+}
+.buyButton {
+  left: 10%;
+  transform: translate(-50%);
+  margin-top: 10px;
+  width: 20%;
+  height: 70%;
+  font-size: 12px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.buyButton:hover{
+  color: black;
+}
+.cancelBuy{
+  left: 10%;
+  transform: translate(-50%);
+  margin-top: 10px;
+  width: 20%;
+  height: 70%;
+  font-size: 12px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.cancelBuy:hover{
+  color: black;
+}
+.orderInner1 {
+  position: absolute;
+  top: 656px;
+  left: 588px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+}
+.pos{
+  top: 20px;
+  left: 10%;
+  right: 10%;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+.CategoryId,
+.ProductId,
+.Price,
+.Quantity
+{ 
+  top: 25px;
+  left: 49%;
+  transform: translate(-50%);
+  width: 100%;
+  margin-bottom: 10px;
+}
+.orderTitle{
+  left: 50%;
+  transform: translateX(-50%);  
+  z-index: 1;
+  text-align: center;
+  position: relative; 
+  font-size: 24px;
+  font-weight:bold;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+.addToCartButton{
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50%;
+  font-size: 12px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+  z-index: -1;
+}
+.addToCartButton:hover{
+  color: black;
+}
+/* Order.module.css */
+@media (max-width: 800px){
+  .addToCartButton{
+    font-size: 8px;
+  }
+  .order{
+    height: 780px;
+  }
+  .orderItem{
+  height: 70%;
+}
+  .cancelBuy,
+  .buyButton{
+    top: 50px;
+    left: 20%;
+    width: 2%;
+    position: absolute;
+    font-size: 6px;
+  }
+  .rectangleDiv2,
+  .orderInner{
+    height: 59%;
+  }
+  .orderInner{
+    top: 27%;
+  }
+  .buyButton{
+    left: 20%;
+  }
+  .cancelBuy{
+    left: 70%;
+  }
+  }
+
+

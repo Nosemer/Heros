@@ -2,46 +2,14 @@ import { FunctionComponent } from "react";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
+import HomeHeader from "../Admincomponents/HomeHeader";
 
 const About: FunctionComponent = () => {
   return (
     <div className={styles.about}>
       <div className={styles.aboutChild} />
       <img className={styles.aboutItem} alt="" src="/rectangle-3@2x.png" />
-      <div className={styles.header}>
-        <div className={styles.rectangleParent}>
-          <img className={styles.frameChild} alt="" src="/rectangle-8@2x.png" />
-          <b className={styles.herosPetStoreContainer}>
-            <p className={styles.herosPet}>Hero’s Pet</p>
-            <p className={styles.herosPet}>Store</p>
-          </b>
-        </div>
-        <div className={styles.homeParent}>
-          <a className={styles.home}>Home</a>
-          <Link className={styles.about1} to="/about">
-            About
-          </Link>
-          <a
-            className={styles.contact}
-            href="https://www.facebook.com/messages/t/109817815396558"
-            target="_blank"
-          >
-            Contact
-          </a>
-        </div>
-        <Button
-          className={styles.headerChild}
-          disableElevation={true}
-          color="primary"
-          name="Login"
-          size="medium"
-          variant="outlined"
-          href="/login"
-          sx={{ borderRadius: "0px 0px 0px 0px", width: 166, height: 65 }}
-        >
-          Login
-        </Button>
-      </div>
+      <HomeHeader />
       <b className={styles.herosPetStoreContainer1}>
         <p className={styles.herosPet}>&nbsp;</p>
         <p className={styles.herosPet}>
@@ -72,13 +40,7 @@ const About: FunctionComponent = () => {
           foster lifetime ties to their client and their pet. Through our
           perseverance in being the best pet store for every pet that needs us,
           we hope to set the bar for excellence in the pet industry and inspire
-          others to prioritize the well-being and happiness of pets. Heros Pet
-          Store is more than just a retail store; it is a testament to the
-          continuing bond between humans and animals. With a dedicated team,
-          commitment to quality, and passion for pets, the store aims to be a
-          trusted partner in every pet's journey. Whether it's grooming
-          services, premium pet food, or expert advice, Heros Pet Store is here
-          to serve the needs of both pets and the families that love them.
+          others to prioritize the well-being and happiness of pets. 
         </p>
       </b>
       <b className={styles.herosPetStore1}>Heros Pet Store Background</b>

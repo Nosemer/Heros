@@ -1,0 +1,109 @@
+.product {
+  position: relative;
+  background-color: var(--color-white);
+  height: 1320px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.productItem {
+  position: absolute;
+  top: 190px;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: 35px;
+  background-color: var(--color-darkslategray);
+  width: 67%;
+  height: 80%;
+}
+.productInner,
+.producttable  {
+  position: absolute;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  width: 62%;
+}
+.productInner { 
+  top: calc(930px - 710px);
+  height: 65px;
+  border-radius: 20px;
+}
+.producttable {
+  top: calc(1030px - 710px);
+  height: 67%;
+}
+.tableTitle{
+  left: 50%;
+  transform: translateX(-50%);  
+  z-index: 1;
+  text-align: center;
+  position: relative; 
+  font-size: 24px;
+  font-weight:bold;
+  border-bottom: 2px solid #000;
+}
+.productButton{
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.productButton:hover{
+  color: black;
+}
+.stockButton{
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.stockButton:hover{
+  color: black;
+}
+.productDelete{
+  position: absolute;
+  right: 1%;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.productDelete:hover{
+  color: black;
+}
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 15;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.paginationControls span {
+  font-size: 13px; /* Adjust the font size of the page number */
+}
+.searchContainer{
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  width: 80%;
+  position: relative; 
+}
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.dialogTextField {
+  width: 100%;
+}
+@media (max-width: 800px){
+  .productButton{
+    font-size: 8px;
+  }
+  
+  }

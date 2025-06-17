@@ -1,0 +1,135 @@
+.dashboard {
+  position: relative;
+  background-color: var(--color-white);
+  height: 1320px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.dashboardItem {
+  position: absolute;
+  top: 190px;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: 35px;
+  background-color: var(--color-darkslategray);
+  width: 67%;
+  height: 80%;
+}
+.dashboardChild1,
+.dashboardChild2 {
+  position: absolute;
+  top: 221px;
+  width: 29%;
+  height: 226px;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  font-weight: bold;
+}
+.dashboardChild1{
+  left: 40%;
+  transform: translate(-50%);
+}
+.dashboardChild2{
+  left: 72%;
+  transform: translate(-50%);
+}
+.activeUser,
+.SaleTitle,
+.StockTitle{
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+.data{
+  margin-top: 15%;
+  display: flex;
+  justify-content: center; 
+}
+.saleTitle{
+left: 50%;
+transform: translateX(-50%);  
+z-index: 1;
+text-align: center;
+position: relative; 
+font-size: 24px;
+font-weight:bold;
+border-bottom: 2px solid #000;
+}
+.fastsale,
+.latestSale{
+  position: absolute;
+  top: calc(1186px - 710px);
+  width: 30%;
+  height: 740px;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  font-weight: bold;
+}
+.fastsale{
+  left: 42.4%;
+  transform: translateX(-50%);
+  width: 33.5%;
+}
+.latestSale{
+  left: 74.2%;
+  transform: translate(-50%);
+  width: 25%;
+}
+.loading
+{
+  left: 50%;
+transform: translateX(-50%);  
+z-index: 1;
+text-align: center;
+position: relative; 
+font-weight: 400;
+font-size: 24px;
+}
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 15;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+.paginationControls span {
+  font-size: 13px; /* Adjust the font size of the page number */
+}
+@media (max-width: 800px){
+.dashboard{
+  height:  2220px;
+}
+.dashboardItem{
+  height: 89%;
+}
+.dashboardChild1,
+.dashboardChild2
+{ position: relative;
+  top: 110px;
+  left: 56%;
+  transform: translateX(-50%);
+  width: 56%;
+  height: 200px;
+  margin-bottom: 30px; 
+}
+.fastsale{
+  left: 56%;
+  transform: translateX(-50%);
+  top: 690px;
+  height: 700px;
+  width: 56%;
+  margin-bottom: 16px; 
+}
+.latestSale{
+  left: 56%;
+  transform: translateX(-50%);
+  top: 1420px;
+  height: 700px;
+  width: 56%;
+  margin-bottom: 16px; 
+}
+
+}
+

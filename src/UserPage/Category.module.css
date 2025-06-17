@@ -1,0 +1,95 @@
+.category {
+  position: relative;
+  background-color: var(--color-white);
+  height: 1320px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.categoryItem {
+  position: absolute;
+  top: 190px;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  background-color: var(--color-darkslategray);
+  width: 67%;
+  height: 80%;
+}
+
+.categoryInner,
+.categorytable {
+  position: absolute;
+  left: 56%;
+  transform: translateX(-50%);
+  border-radius: var(--br-16xl);
+  background-color: var(--color-white);
+  width: 62%;
+}
+.categoryInner{
+  top: calc(930px - 710px);
+  height: 65px;
+  border-radius: 20px;
+}
+.categorytable {
+  top: calc(1030px - 710px);
+  height: 67%;
+}
+.tableTitle{
+  left: 50%;
+  transform: translateX(-50%);  
+  z-index: 1;
+  text-align: center;
+  position: relative; 
+  font-size: 24px;
+  font-weight:bold;
+  border-bottom: 2px solid #000;
+}
+
+.categoryButton{
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.categoryButton:hover{
+  color: black;
+}
+.categoryDelete{
+  position: absolute;
+  right: 1%;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}
+.categoryDelete:hover{
+  color: black;
+}
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 15;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.paginationControls span {
+  font-size: 13px; /* Adjust the font size of the page number */
+}
+.searchContainer{
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  width: 80%;
+  position: relative; 
+}
+@media (max-width: 900px){
+.categoryButton{
+  font-size: 8px;
+}
+.categoryDelete{
+  left: 80%;
+  font-size: 8px;
+}
+}

@@ -1,0 +1,77 @@
+
+.sidenavigation {
+  display: flex;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  height: 2000px;
+  transition: width 0.3s;
+  z-index: 1000;
+  border-right: 2px solid #000;
+}
+
+.drawer {
+  top: 150px;
+  width: 300px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+.drawerOpen {
+  top: 150px;
+  width: 300px;
+}
+
+.drawerClose {
+  top: 150px;
+  width: 60px;
+}
+
+.menuButton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  border-radius: 0px;
+  background-color:  rgba(152, 152, 152, 0.769);
+}
+
+.scrollableList {
+  overflow-y: auto;
+  height: calc(100% - 48px);
+}
+
+.NavLink {
+  text-decoration: none;
+  width: 100%;
+  position: relative;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 58px;
+  flex-shrink: 0;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+.NavLink:hover {
+  color: rgb(119, 219, 255);
+}
+.listItemIcon {
+  color: #000;
+}
+.listItemIcon:hover{
+  color: rgb(119, 219, 255);
+}
+.contentShift {
+  margin-left: 320px;
+  transition: margin-left 0.3s ease;
+}
+@media (max-width: 500px) {
+  .drawerOpen {
+    width: 100%;
+  }
+
+  .contentShift {
+    margin-left: 0;
+  }
+}

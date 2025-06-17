@@ -1,0 +1,175 @@
+.homeChild,
+.homeItem {
+  position: absolute;
+  left: 0;
+  width: 1460px;
+}
+.homeChild {
+  top: 0;
+  background-color: var(--color-darkslategray);
+  height: 1579px;
+}
+.homeItem {
+  top: -130px;
+  border-radius: var(--br-85xl);
+  height: 893px;
+  object-fit: cover;
+}
+.letsGo {
+  position: relative;
+  top: 536px;
+  left: 160px;
+  letter-spacing: 0.1em;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.833);
+  color: white; /* Set text color to white */
+  width: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 104px;
+}
+.letsGo:hover { 
+  color: black;}
+
+
+.petStore,
+.whereEveryTail {
+  position: absolute;
+  left: 123px;
+  letter-spacing: 0.1em;
+  display: inline-block;
+}
+.petStore {
+  top: 255px;
+  font-size: var(--font-size-29xl);
+  width: 540px;
+  height: 163px;
+}
+.whereEveryTail {
+  top: 345px;
+  width: 550px;
+  height: 87px;
+}
+.component1Child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+}
+.aboutUs,
+.contactUs {
+  text-decoration: none;
+  position: absolute;
+  font-size: var(--font-size-17xl);
+  color: inherit;
+  text-align: right;
+}
+.aboutUs {
+  cursor: pointer;
+  top: 20.49%;
+  left: 81.16%;
+}
+.contactUs {
+  top: 57.56%;
+  left: 78.9%;
+}
+.contactUs1,
+.image1Icon {
+  position: absolute;
+  left: 8.42%;
+}
+.contactUs1 {
+  top: 10.73%;
+  font-size: var(--font-size-13xl);
+}
+.image1Icon {
+  height: 12.2%;
+  width: 1.71%;
+  top: 38.54%;
+  right: 89.86%;
+  bottom: 49.27%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.arjayJoveroGuillermo,
+.image2Icon {
+  position: absolute;
+  top: 37.56%;
+  left: 11.44%;
+}
+.image2Icon {
+  height: 12.2%;
+  width: 1.71%;
+  top: 58.54%;
+  right: 89.86%;
+  bottom: 29.27%;
+  left: 8.42%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.div,
+.image3Icon {
+  position: absolute;
+  top: 57.56%;
+  left: 11.44%;
+}
+.image3Icon {
+  height: 12.2%;
+  width: 1.71%;
+  top: 77.07%;
+  right: 89.86%;
+  bottom: 10.73%;
+  left: 8.42%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component1,
+.herosPetStore {
+  position: absolute;
+  top: 76.1%;
+  left: 11.44%;
+}
+.component1 {
+  top: 1374px;
+  left: 0;
+  width: 1460px;
+  height: 205px;
+}
+.homeInner,
+.rectangleIcon {
+  position: absolute;
+  top: 882px;
+  left: 788px;
+  border-radius: 83px;
+  width: 550px;
+  height: 374px;
+  object-fit: cover;
+}
+.rectangleIcon {
+  left: 123px;
+}
+.home {
+  text-decoration: none;
+  width: 1460px;
+  background-color: var(--color-white);
+  max-width: 100%;
+  height: 1579px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
